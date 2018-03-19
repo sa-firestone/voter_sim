@@ -1,20 +1,19 @@
 #              **LIST_OF_FIND_SECTIONS**
 
 #         person---------------------(line 49)
-#         politician-----------------(line 55)
-#         voter----------------------(line 71)
-#         general--------------------(line 91)
-#         create_general-------------(line 103)
-#         update_general-------------(line 126)
-#         update_voter---------------(line 149)
-#         update_politician----------(line 178)
-#         delete---------------------(line 207)
-#         instance_start-------------(line 230)
+#         politician-----------------(line 54)
+#         voter----------------------(line 69)
+#         general--------------------(line 88)
+#         create_general-------------(line 99)
+#         update_general-------------(line 121)
+#         update_voter---------------(line 143)
+#         update_politician----------(line 171)
+#         delete---------------------(line 199)
+#         instance_start-------------(line 221)
 
 require "./world.rb"
 
 class WorldUi 
-
     
     def initialize 
         @world = World.new
@@ -48,13 +47,11 @@ class WorldUi
     end
 
 #person
-
     def ask_name
         puts "name?"
     end
 
 #politician
-
     def pick_party
         party = gets.chomp
         case party.downcase
@@ -70,7 +67,6 @@ class WorldUi
     end
 
 #voter
-
     def pick_politics
         politics = gets.chomp()
         case politics.downcase 
@@ -90,7 +86,6 @@ class WorldUi
     end
 
 #general
-
     def opening_lines 
         puts "Hello, and welcome to the Voter Simulator!"
         puts "What would you like to do today?"
@@ -102,7 +97,6 @@ class WorldUi
     end
 
 #create_general
-
     def voter_politician_create(person)
         case person.downcase
         when "v"
@@ -125,7 +119,6 @@ class WorldUi
     end
 
 #update_general
-
     def voter_politician_update(entity)
         case entity.downcase 
         when "v"
@@ -148,7 +141,6 @@ class WorldUi
     end
 
 #update_voter
-
     def update_what_category_voter
         puts "Would you like to update (N)ame or (P)olitics?"
         choice = gets.chomp
@@ -177,7 +169,6 @@ class WorldUi
     end
 
 #update_politician
-
     def update_what_category_pol
         puts "Would you like to update (N)ame or (P)arty?"
         choice = gets.chomp
@@ -206,7 +197,6 @@ class WorldUi
     end
 
 #delete
-
     def voter_politician_delete(person)
         ask_name()
         name = gets.chomp
